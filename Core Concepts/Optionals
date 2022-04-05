@@ -1,9 +1,0 @@
-OPTIONALS: Optionals allow us to represent a value or the absence of a value within a variable
-            - Optionals can only be used with variables because the value of the variable is subject to change. 
-                  * Meaning that sometimes the variable will have a value and sometimes it wont. Meaning the variable is mutable. 
-            - A variable with the absence of a value is known as "nil". *** nil MEANS THERE IS NO VALUE *** 
-                  * Representing the absence of a value with 0 will still result in Swift identifying that variable as having a value because 0 is an Int. 
-            - Optionals all have a type. It will have type or no type (nil). 
-            
-
-
