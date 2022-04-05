@@ -5,3 +5,5 @@ OPTIONALS: Optionals allow us to represent a value or the absence of a value wit
                   * Representing the absence of a value with 0 will still result in Swift identifying that variable as having a value because 0 is an Int. 
             - Optionals all have a type. It will have type or no type (nil). 
             
+
+<img width="940" alt="Screen Shot 2022-04-05 at 10 49 29 AM" src="https://user-images.githubusercontent.com/64448202/161782236-9ac0bb48-4782-451f-bec5-07e64e80ef6c.png">
