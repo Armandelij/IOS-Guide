@@ -20,12 +20,38 @@ var carModel: String? // To turn the variable to an optional String. Add a "?" a
 var carModel = nil
 ```
 
- It is important to understand that the compliler does not know if the optional has a value, until it is unwrapped. There are many ways to unrap optionals
+> It is important to understand that the compliler does not know if the optional has a value, until it is unwrapped. There are many ways to unrap optionals
 
 ## Force Unwrapping
 Force unwrapping, unwraps the variable without checking if there is a value or not. The lack of a value when that variable is unwrapped will result in a fatal error, which will crash the app. 
 
+
+
 ``` swift
-var unwrappedCarModel = carModel! // In case optioanl does contain a value
+var unwrappedCarModel = carModel! // Use an (!) after the optional name to tell the compiler to force unwrap it. 
+```
+In the above code a new variable is assigned to the optional variable in case that variable does have a value. If variable does contain a value it will be stored in decalred variable. Provide a (!) after the optional variable to tell swift to force unrwap it.
+
+
+## Optional Binding
+
+``` Swift
+if let carModel = carModel { // sharing variable and constant names is called shadowing
+    print("My favorite car is \(carModel)")
+} else {
+    print("I dont have a favorite car")
+}
+```
+The code above says "if this optional is not nil, store the value of the optional in this new constant"
+
+
+## Nil Coalescing
+
+Nil coalescing will allow you to check and see if there is a value in an optional variable. If there is no value, you can replac the nil value with your own value.
+
+``` swift
+var firstName: String?
+var requiredFirstName = firstName ?? "You must provide a first name" // The value after the ?? is the default value that will be stored in the decalred variable if the optional variabl is nil
+```
 
 
