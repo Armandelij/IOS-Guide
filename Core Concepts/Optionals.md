@@ -47,11 +47,11 @@ The code above says "if this optional is not nil, store the value of the optiona
 
 ## Nil Coalescing
 
-Nil coalescing will allow you to check and see if there is a value in an optional variable. If there is no value, you can replac the nil value with your own value.
+Nil coalescing will allow you to check and see if there is a value in an optional variable. If there is no value (nil), you can set a default value.
 
 ``` swift
 var firstName: String?
-var requiredFirstName = firstName ?? "You must provide a first name" // The value after the ?? is the default value that will be stored in the decalred variable if the optional variabl is nil
+var requiredFirstName = firstName ?? "You must provide a first name" // The value after the ?? is the default value that will be stored in the decalred variable if the optional variable is nil.
 ```
 
 
