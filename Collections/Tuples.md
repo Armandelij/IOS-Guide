@@ -35,5 +35,15 @@ If you want to put a group of desired values into a variable, you can do that in
 ``` swift
 let (year, possesor, type, odometer) = elijahsJeep
 ```
+In the code above each variable will hold the one value in "elijahsJeep" in the order it was written
+
+``` swift
+//                                 0              1                       2                  3
+let elijahsJeep = (manufactured: 2022, owner: "Elijah", transmission: "manuel", odometer: 98000)
+
+//                                 0              1                       2                  3
+let (                             year,       possesor,                  type,             odometer    ) = elijahsJeep
+```
+
 
 
