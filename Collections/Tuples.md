@@ -25,5 +25,15 @@ elijahsJeep.1 // "Elijah"
 
 ``` swift
 let elijahsJeep = (manufactured: 2022, owner: "Elijah", transmission: "manuel", odometer: 98000)
-
+elijahsJeep.transmission
+elijahsJeep.owner
 ```
+Now you can access values within the tuple using the provided name associated with each value, this creates less confusion when evaluating your code.
+
+If you want to put a group of desired values into a variable, you can do that in one line of code.
+
+``` swift
+let (year, possesor, type, odometer) = elijahsJeep
+```
+
+
