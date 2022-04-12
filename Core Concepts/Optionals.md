@@ -30,7 +30,7 @@ Force unwrapping, unwraps the variable without checking if there is a value or n
 ``` swift
 var unwrappedCarModel = carModel! // Use an (!) after the optional name to tell the compiler to force unwrap it. 
 ```
-In the above code a new variable is assigned to the optional variable in case that variable does have a value. If variable does contain a value it will be stored in decalred variable. Provide a (!) after the optional variable to tell swift to force unrwap it.
+In the above code a new variable is assigned to the optional variable in case that variable does have a value. If the variable does contain a value it will be stored in the decalred variable. Provide a (!) after the optional variable to tell swift to force unrwap it.
 
 
 ## Optional Binding
