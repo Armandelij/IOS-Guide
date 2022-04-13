@@ -39,8 +39,12 @@ wardrobe["T-Shirts"] = 20
 ``` swift
 wardrobe = ["Jeans": 8, "T-Shirts": = 20, "Shoes": 5, "Hoodies": 6]
 ```
+
+You access the value of a dictionary by provided the name of the dictionary followed by the key surrounded in brackets.
 ``` swift
 wardrobe["Shoes"] // 5
 ```
+
+
 
 
