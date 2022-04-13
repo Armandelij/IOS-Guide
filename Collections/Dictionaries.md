@@ -55,4 +55,7 @@ wardrobe.removeValue(forKey: "Hoodies") // the remove value methods returns the 
 wardrobe["Jeans"] = nil // ["T-Shirts": = 20, "Shoes": 5]
 ``` 
 
+## Iterating Through Dictionaries
+
+
 
