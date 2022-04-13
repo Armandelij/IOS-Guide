@@ -28,7 +28,59 @@ colors += ["yellow", "orange", "green"] // colors = ["blue", "red", "black", "wh
 ```
 
 ## Operating on Arrays
+You can access an element by referenceing its index position in an array
 
-Yo
+``` swift
+colors[1] // "red"
+```
+
+## Array Slice
+An array slice is a subset of elements of an array
+
+``` swift
+let firstThree = colors[1...3] // firstThree = ["red", "black", "white"]
+```
+The subset firstThree is not 0 based becase it references the colors array. To make it 0 based you need to specify it as an array.
+
+``` swift
+let firstThree = Array(colors[1..3])
+firstThree[0] // "red"
+```
+## Emtying an Array
+you can empty an array by using the .removeAll() method
+
+``` swift
+colors.removeAll() // []
+```
+
+## Determining How Many Elements are in an Array
+You can determine the amount of elements in an array using the .count method
+
+``` swift
+colors = ["blue", "red", "black", "white", "purple", "yellow", "orange", "green"]
+colors.count // 8  
+```
+> not to be confused with the postion which starts at 0 there are 8 elements within the colors array
+
+## Checking if a Value Resides in an Array
+You can check if an element exists within an array by using the .contains method
+
+``` swift
+colors.contains("red")
+```
+
+## Inserting and Removing Elements at Specific Positions in an Array
+You can insert elements at certain positions in an array using the .insert method
+
+``` swift
+colors.insert("pink" at: 0) // colors = ["pink", "blue", "red", "black", "white", "purple", "yellow", "orange", "green"]
+```
+
+You can remove specific elements in an array using the .removeAt method
+
+``` swift
+colors.removeAt(at: 1)
+```
+
 
 
