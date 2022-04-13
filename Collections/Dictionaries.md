@@ -11,7 +11,7 @@ The difference between dictionaries and arrays are that keys in a dictionary can
 Creating an empty dictionary
 
 ``` swift
-var wardrobe: [String: Int] = [:] // You must explicitly declare the type of each value and string of an empty dictionary. 
+var wardrobe: [String: Int] = [:] // You must explicitly declare the type of each value and key of an empty dictionary. 
 ```
 
 Creating a dictionary with stored values
@@ -32,3 +32,15 @@ You can also update a dictionary by using short hand syntax
 
 ``` swift
 wardrobe["T-Shirts"] = 20
+```
+
+## Accesseing Values in a Dictionary
+
+``` swift
+wardrobe = ["Jeans": 8, "T-Shirts": = 20, "Shoes": 5, "Hoodies": 6]
+```
+``` swift
+wardrobe["Shoes"] // 5
+```
+
+
