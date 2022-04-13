@@ -12,7 +12,23 @@ Creating an empty dictionary
 
 ``` swift
 var wardrobe: [String: Int] = [:] // You must explicitly declare the type of each value and string of an empty dictionary. 
-
-//                     Key    Value
-var classAndGrades = ["Math": "C", "Science": "A"] // the compiler knows that you want string for the key and value by use of type inferance. No need to explictly declare the type.
 ```
+
+Creating a dictionary with stored values
+
+``` swift
+//                     Key    Value
+var classAndGrades = ["Math": "C", "Science": "A"] // the compiler knows that you want a string for the key and value by use of type inferance. No need to explictly declare the type.
+```
+
+## Updating an Existing Dictionary.
+You can update the value of a dictionary by using the .updateValue method
+
+``` swift
+//                   value           key
+wardrobe.updateValue("8", forKey: "Jeans")
+```
+You can also update a dictionary by using short hand syntax
+
+``` swift
+wardrobe["T-Shirts"] = 20
