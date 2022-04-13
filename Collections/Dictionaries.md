@@ -44,7 +44,15 @@ You access the value of a dictionary by provided the name of the dictionary foll
 ``` swift
 wardrobe["Shoes"] // 5
 ```
+> You can use some of the same methods on dictionaries as you can with arrays. For example, to see if an array is empty (.isEmpty) or how many pairs are in the dictionaty (.count) 
 
+``` swift
+wardrobe.isEmpty // false
+wardrobe.count // 4
+wardrobe.removeValue(forKey: "Hoodies") // the remove value methods returns the key, just in case you wanted to do something with it
 
+// Since you cannot have a key without a value in a dictionary. You can set that key with a nil value to remove the pair
+wardrobe["Jeans"] = nil // ["T-Shirts": = 20, "Shoes": 5]
+``` 
 
 
