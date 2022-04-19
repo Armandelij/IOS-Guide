@@ -56,6 +56,39 @@ wardrobe["Jeans"] = nil // ["T-Shirts": = 20, "Shoes": 5]
 ``` 
 
 ## Iterating Through Dictionaries
+You can iterate through Dictionaries using a couple of methods. Using the for loop just like arrays but you have to account for the keys and values. You can also use the (.keys) or (.values) method
+
+``` swift
+       key      value
+for (clothes, quanity) in wardrobe { // the (quanity) and (clothes) indexs are made up names for the key associated with the clothes and value associateed with the quanity, they can be any given name. Make sure the name given to the key is first
+  print("I have \(quanity) \(clothes)")  
+}
+```
+> If you want to exclude a Key or Value you can insert an underscore (_) in place of the endisired Key or Value
+``` swift
+for (clothes, _) in wardrobe {
+
+}
+```
+
+> you can also use the .keys or .values method
+``` swift
+for clothes in wardrobe.keys { // here you can eliminate the need tor and underscore
+
+}
+
+for quanity in wardrobe.values { 
+
+}
+```
+
+
+
+
+
+
+
+
 
 
 
