@@ -39,6 +39,25 @@ struct ContentView: View {
 ```
 <img width="325" alt="Screen Shot 2022-04-26 at 11 42 42 AM" src="https://user-images.githubusercontent.com/64448202/165339711-003dd5ba-0621-46ee-80e6-2b69f3f3f0b1.png">
 
+# Z-Stack
+Z stack arranges its children on the on z- axis, it determines the depth of each child element depending on how many children are in the view
+
+``` swift
+    var body: some View {
+        ZStack{ // Order matters, the first child view will have later child views on top of it.
+            Color(.red)
+                .frame(width: 300, height: 300)
+            Color(.blue)
+                .frame(width: 200, height: 200)
+            Color(.orange)
+                .frame(width: 100, height: 100)
+        }
+    }
+}
+```
+<img width="325" alt="Screen Shot 2022-04-26 at 10 21 49 PM" src="https://user-images.githubusercontent.com/64448202/165426146-e623b42c-fb2e-4b7c-a7db-63bd4c6ff5e1.png">
+
+ 
 
 
 
