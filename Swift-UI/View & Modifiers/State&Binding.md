@@ -30,7 +30,7 @@ For example the code above uses an @State property on the placeHolderText variab
 ``` swift
 @State var placeHolderText = "Hello World"
 ```
-This current variable/value is only accessable inside of its current struct (ContentView). The @State property attached to it allows us to represent that variable/value else where if we choose to. The @Binding property will allow us to share the variable/value between @State property elsewhere in the code. Also if the @State property updates the @binding property will also update. 
+This current variable/value is only accessable inside of its current struct (ContentView). The @State property attached to it allows us to represent that variable/value else where if we choose to. The @Binding property will allow us to share the variable/value between @State property elsewhere in the code. 
 
 ## Example
 ``` swift
@@ -50,7 +50,5 @@ struct CustomButton2: View {
     }
 }
 ```
-# Conclusion 
-The @State property and @Binding property communicate whenever the @State property gets created or destroyed. Both will share the same value. 
 
 
