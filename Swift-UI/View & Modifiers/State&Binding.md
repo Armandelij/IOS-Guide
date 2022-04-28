@@ -23,5 +23,34 @@ When @State is put before a property, it is then moved from the storage of the s
 }
    ```
 
-#Binding
+# Binding
+@binding allows us to declare a value that comes from elsewhere, and that it should be shared elsewhere. 
+
+For example the code above uses an @State property on the placeHolderText variable. Here is again below. 
+``` swift
+@State var placeHolderText = "Hello World"
+```
+This current variable/value is only accessable inside of its current struct (ContentView). The @State property attached to it allows us to represent that variable/value else where if we choose to. The @Binding property will allow us to share the variable/value between @State property elsewhere in the code. Also if the @State property updates the @binding property will also update. 
+
+## Example
+``` swift
+struct CustomButton1: View {
+    @Binding var placeHolderText: String
+    
+    var body: some View {
+        Button("cat says") {self.placeHolderText = "Meow"}
+    }
+}
+
+struct CustomButton2: View {
+    @Binding var placeHolderText: String
+    
+    var body: some View {
+        Button("dog says") {self.placeHolderText = "Roof"}
+    }
+}
+```
+# Conclusion 
+The @State property and @Binding property communicate whenever the @State property gets created or destroyed. Both will share the same value. 
+
 
