@@ -1,0 +1,3 @@
+# Passing Values Using the Environment Object
+
+Sharing data within navigation stacks is made easy by using the NavigationView and environmentObject()
