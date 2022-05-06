@@ -4,6 +4,8 @@ Sharing data within navigation stacks is made easy by using the NavigationView a
 The NavigationView automatically shares its entire environment with every child view that it presents. 
 Attaching the environmentObject to the navigationView itself will allow the environment object to be shared in any child view the NavigationView has.
 
+## Example 
+
 ``` swift
 class User: ObservableObject {
     @Published var score = 0
@@ -41,3 +43,49 @@ struct ContentView: View {
     }
 }
 ```
+
+To demonstrate this, we will need to create an observed object that will host the data.
+
+``` swift
+class User: ObservableObject {
+    @Published var score = 0
+}
+```
+
+We can now create a detail view that uses the EnvironmentObject. Since the ChangeView now has access to the user class we can now update the score. 
+
+``` swift
+struct ChangeView: View {
+    @EnvironmentObject var user: User
+
+    var body: some View {
+        VStack {
+            Text("Score: \(user.score)")
+            Button("Increase") {
+                self.user.score += 1
+            }
+        }
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
