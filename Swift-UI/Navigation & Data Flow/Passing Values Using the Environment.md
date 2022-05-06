@@ -69,9 +69,26 @@ struct ChangeView: View {
 }
 ```
 
+Now in our content view we can we can create a new instance of user that will be shared in the NavigationView environment. 
 
+``` swift
+struct ContentView: View {
+    @StateObject var user = User()
 
-
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 30) {
+                Text("Score: \(user.score)")
+                NavigationLink(destination: ChangeView()) {
+                    Text("Show Detail View")
+                }
+            }
+            .navigationTitle("Navigation")
+        }
+        .environmentObject(user)
+    }
+}
+```
 
 
 
