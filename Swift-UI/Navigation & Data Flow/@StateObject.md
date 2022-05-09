@@ -39,3 +39,6 @@ struct ContentView: View {
     }
 }
 ``` 
+This insures that the Vehicle instance does not get destroyed when the view updates.
+> @StateObject should only be used once per object, it should only be used inside the view that is responsible for creating the the object itself. 
+
