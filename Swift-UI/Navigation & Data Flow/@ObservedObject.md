@@ -1,6 +1,6 @@
 # @ObservedObject
-The @observableObject allows views to monitor the state of an external object, it will also send an notification of any change referring that object. 
-> The @ObservableObject should only be used with objects that have been created else where, this is because SwiftUI might destroy the object. 
+The @observedObject allows views to monitor the state of an external object, it will also send an notification of any change referring that object. 
+> The @ObservableObject protocol should only be used with objects that have been created else where, this is because SwiftUI might destroy the object. 
 
 ## Exammple
 
