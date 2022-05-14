@@ -145,12 +145,27 @@ The 2 views that we created "SampleView and TextBlockView" can now be added to t
     
  CONTENTVIEW
  ``` swift
- var body: some View {
+ class DataExample : ObservableObject {
+    @Published var text = "Counter"
+    @Published var counter = 0
+}
+
+struct ContentView: View {
+    @StateObject var data = DataExample() // lets this view know that the object exists inside this view
+    
+    var body: some View {
         VStack {
             TextBlockView()
             SampleView()
         }
-        .environmentObject(data)
+        .environmentObject(data) // all of the views inside the Vstack will have access to the data object
+    }
+}
 ```    
-    
+Our results should look like this
+
+
+https://user-images.githubusercontent.com/64448202/168439943-df0e6caf-ac9c-4d90-8ea1-cace534c749e.mov
+
+
     
