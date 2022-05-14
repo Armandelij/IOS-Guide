@@ -23,8 +23,9 @@ struct ContentView: View {
     }
 }
 ```
-We may have a Data Example class like the one above that conforms to the ObservableObject protocol. 
-We create an @StateObject for each object that conforms to the the ObservableObject protocol.
+
+We may have a DataExample class like the one below that conforms to the ObservableObject protocol. 
+
 ``` swift
 class DataExample : ObservableObject {
     @Published var text = "Counter"
@@ -32,8 +33,7 @@ class DataExample : ObservableObject {
 }
 ```
 
-
-> The @StateObject should be created in the same view the object was created in. We can use the @EnvironmentObject in place of the @StateObject in other views of the where the object did not originate from.
+> The @StateObject should be created in the same view the origional object was created in. We can use the @EnvironmentObject in place of the @StateObject in other views where the object did not originate from.
 
 ``` swift
 struct ContentView: View {
@@ -49,5 +49,60 @@ var body: some View {
             
         }
         .environmentObject(data) // all of the views inside the Vstack will have access to the data object
+    
 ```
+
+
+Now we will create other views that use the data from the data object and place them into the VStack of the content view so they can have access 
+
+SAMPLEVIEW
+
+``` swift
+struct SampleView: View {
+    @EnvironmentObject var data : DataExample// only use this inside of a view that has the parent view of the environmentObject data
+    
+    var body: some View {
+        Text("\(data.text) : \(data.counter)")
+    }
+}
+
+struct SampleView_Previews: PreviewProvider {
+    static var previews: some View {
+        SampleView()
+            .environmentObject(DataExample())
+    }
+}
+```
+
+In the SampleView Struct that conforms to the View protocol we will use the @EnvironmentObject and it will be of type DataExample
+
+``` swift
+struct SampleView: View {
+    @EnvironmentObject var data : DataExample// only use this inside of a view that has the parent view of the environmentObject data
+```
+
+
+In the SampleView_Previews we have to provide the preview with the DataExample() Object using the .environmentObject() method
+
+``` swift
+struct SampleView_Previews: PreviewProvider {
+    static var previews: some View {
+        SampleView()
+            .environmentObject(DataExample())
+    }
+}
+```
+Now we can create our view that displays itself to the UI
+
+``` swift
+var body: some View {
+        Text("\(data.text) : \(data.counter)")
+    }
+}
+```
+
+
+
+
+
 
