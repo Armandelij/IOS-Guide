@@ -101,8 +101,56 @@ var body: some View {
 }
 ```
 
+Now we will create one last View
+
+TEXTBLOCKVIEW
+
+Similar to the last view we will use the @EnvironmentObject with type DataExample within the TextBlockView
+
+``` swift
+struct TextBlockView: View {
+    @EnvironmentObject var data: DataExample
+``` 
 
 
+Again this preview also needs the .environmentObject(DataExample()) 
 
+``` swift
+struct TextBlockView_Previews: PreviewProvider {
+    static var previews: some View {
+        TextBlockView()
+            .environmentObject(DataExample())
+    }
+}
+```
 
+Now we will customize the view to display it on the UI
 
+``` swift
+var body: some View {
+        ZStack {
+            Rectangle()
+                .frame(width: 200, height: 60)
+                .foregroundColor(.blue)
+                .cornerRadius(9)
+            Text("\(data.text) : \(data.counter)")
+                .foregroundColor(.white)
+        }
+        .onTapGesture {
+            data.counter += 1
+        }
+    }
+```
+The 2 views that we created "SampleView and TextBlockView" can now be added to the Content Views VStack
+    
+ CONTENTVIEW
+ ``` swift
+ var body: some View {
+        VStack {
+            TextBlockView()
+            SampleView()
+        }
+        .environmentObject(data)
+```    
+    
+    
