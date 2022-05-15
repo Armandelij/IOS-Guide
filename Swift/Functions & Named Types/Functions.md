@@ -46,3 +46,18 @@ When you call the functinon you must provide the name of the parameter followed 
 ``` swift
 doMath(a: 5, b: 5)
 ```
+
+## Defalut Values
+ You can also set default values in the parameter list.
+ Default values allow you to supply a value for a parameter in declaration of a funtion
+ 
+ ``` swift
+ func doMath(a: Int, b: Int = 7) {
+    print(a + b)
+}
+ ```
+ When calling a function with a default value it is not required to provide a value/argument for that specific parameter because it already has an argument.
+ 
+ ``` swift
+ doMath(a: 5)
+ ```
