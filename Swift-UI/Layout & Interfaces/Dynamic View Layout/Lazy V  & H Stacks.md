@@ -2,7 +2,7 @@
 
 lazy V and H Stacks only load the content that is present on the screen, this is more efficient when there is a lot of content to load. 
 
-> Regular V and H stacks load all of the content up front which can troublesome of there is a lot of content to load. 
+> Regular V and H stacks load all of the content up front which can be troublesome if there is a lot of content to load. 
 
 ## Example
 ``` swift
