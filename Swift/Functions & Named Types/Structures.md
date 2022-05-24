@@ -7,7 +7,8 @@ Creating a struct:
 2. provide the name of the struct, followed by curly braces. The name of the struct should start with a capitol letter for naming convention purposes. 
 
 # Example
-``` struct BballPlayer {
+``` swift
+struct BballPlayer {
 
 }
 ```
@@ -48,7 +49,17 @@ func getfouledStatus(fouledOut: Int = 6) -> Bool {
 ```
 
 # Creating Instances of the Student Struct
+Creating instances allows us to create multiple objects using the properties of the struct. This why the struct is seen as a blue print. 
 
+Creating instances
+1. create a variable or constant 
+2. set it equal to the struct name.
+3. 3. set the value of the initilaizer. the initilizer is the properties that where created in the origional struct. It should generate itself
+
+``` swift
+var elijah = BBallPlayer(name: "Elijah", points: 49, fouls: 1)
+
+```
 
 
 
