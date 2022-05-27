@@ -5,6 +5,8 @@ In swift directories are represented using the URL struct. We can use the file m
 ## Step 1 - Access the Default File Manager
 
 ``` swift
+import Foundation
+
 FileManager.default
 ```
 ## Step 2 - Finding the users Document Directory  by using file manager instance method named ".urls"
