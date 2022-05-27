@@ -44,13 +44,47 @@ extension FileManager {
 }
 ```
 
+## Step 4 - Now we can access the new property
+
+``` swift
+FileManager.documentDirectoryURL
+```
+
+> It is ideal to put reusable code in another file. 
+
+## Step 5 - Create a new file and name it Extensions, then open a new file you can name it "FileManager"
+
+Extensions
+  FileManager
+  
+``` swift
+extension FileManager {
+  static var documentDirectoryURL: URL {
+  `default`.urls(for: .documentDirectory, in: .userDomainMask)[0]
+  }
+}
+```
+
+## back in the Playground 
+
+The code below generates an error because the extension need to be public for other files to access it. 
+
+``` swift
+FileManager.documentDirectoryURL
+```
+
+## back in File Manager
 
 
+``` swift
+public extension FileManager {
+  static var documentDirectoryURL: URL {
+  `default`.urls(for: .documentDirectory, in: .userDomainMask)[0]
+  }
+}
+```
 
-
-
-
-
-
+> An easy way to access the document directory is to right click the "file:///" URL that is shown on the right side of the play ground. then select open URL.
+> The document for the current play ground should be displayed. 
 
 
