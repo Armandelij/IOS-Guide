@@ -21,3 +21,13 @@ stringURL.path
 ``` 
 
 Both APIs perform the same thing. 
+
+
+## Practical Example
+
+``` swift
+let challengeString: String = "To Do List"
+let challengeURL: URL = URL(fileURLWithPath: challengeString, 
+relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("txt")
+
+challengeURL.lastPathComponent // this will display the path
