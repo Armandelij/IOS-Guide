@@ -94,12 +94,115 @@ let person2 = try! decoder.decode(Person.self, from: person2JSONData)
 
 # ARRAYS
 
+The array below is an array of JSON objects which can be decoded.
 
+``` swift
+let personsJSON = """
+[
+    {
+        "name": "James",
+        "age": 45,
+        "gender": "Male",
+        "sign": "Sagitarius",
+        "partner": "Emily",
+        "isEmployed": true
+    },
+    {
+        "name": "Mary",
+        "age": 45,
+        "gender": "Female",
+        "sign": "Taurus",
+        "isEmployed": false
+    }
+]
+"""
+```
+> We created a Person struct in the previous example, we can use it again because each object has Key Value pairs that correspond to Person struct.
 
+Again we must convert the JSON object into data, convert the data into an array
 
+``` swift
+ //convert array into data
+let personsJSONData = personsJSON.data(using:.utf8)!
+ //convert the data into an array. Since we are decoding an array we need an array of the person struct.
+let personsArray = try! decoder.decode([Person].self, from: personsJSONData)
+```
 
+Looping through the data
+ If the person doesnt have a partner, we can use nil coelesing to express that. 
 
+``` swift
+for person in personsArray {
+    print("\(person.name)'s partner is \(person.partner ?? "none")")
+}
+```
 
+> We can pick and chose what we want to decode from the JSON objects. From there we can build our classes and structs accordingly.
 
+## Complex Objects
+
+``` swift
+
+let familyJSON = """
+{
+    "familyName": "Smith",
+    "members": [
+        {
+            "name": "James",
+            "age": 45,
+            "gender": "Male",
+            "sign": "Sagitarius",
+            "partner": "Emily",
+            "isEmployed": true
+        },
+        {
+            "name": "Mary",
+            "age": 45,
+            "gender": "Female",
+            "sign": "Taurus",
+            "isEmployed": false
+        }
+    ]
+}
+"""
+```
+If you look closley "memebers" is an array of our Person struct. We can use that in a new array.
+
+``` swift
+struct Family: Decodable {
+    let familyName: String
+    let members: [Person]
+}
+
+let familyJSONData = familyJSON.data(using: .utf8)!
+let myFamily = try! decoder.decode(Family.self, from: familyJSONData)
+
+``` 
+
+We can create a better model to for the family object by including a gender property in our person struct
+
+``` swift
+struct Family2: Decodable {
+    enum Gender: String, Decodable { // creates a gender of string type cases
+        case Male, Female, Other
+    }
+    struct Person: Decodable {
+        let name: String
+        let age: Int
+        let gender: Gender
+        //let sign: String
+        let partner: String? 
+        let isEmployed: Bool
+            
+        }
+    let familyName: String
+    let members:[Person]
+}
+
+let myFamily2 = try! decoder.decode(Family2.self, from: familyJSONData)
+for member in myFamily2.members {
+   print(member.name)
+}
+```
 
 
