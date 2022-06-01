@@ -80,7 +80,8 @@ let person2JSON = """
 """
 ```
 
-We can use the same decoder on person2. We just need to change the name
+We can use the same decoder on person2, we just need to change the name
+The code below produces an error because the second object (person2) has no partner key value pair and the Person struct indicates that there is a parnter String. to solve this make partner a String optional
 
 ``` swift
 let person2JSONData = person2JSON.data(using: .utf8)!
@@ -90,5 +91,15 @@ let person2 = try! decoder.decode(Person.self, from: person2JSONData)
 //print(person2.partner)
 
 ```
+
+# ARRAYS
+
+
+
+
+
+
+
+
 
 
