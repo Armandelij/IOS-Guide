@@ -81,7 +81,7 @@ Since we have 2 structs we have to create 2 enums, 1 per struct.
  
  ```
  
- Now you can proceed as nomral with decoding.
+ Now you can proceed as normal with decoding.
  
  
  
