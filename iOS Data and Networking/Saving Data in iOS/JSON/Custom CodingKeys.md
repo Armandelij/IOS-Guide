@@ -76,6 +76,10 @@ struct Book: Decodable {
 ```
 
 With the container defined we can assign each of the keys to the corresponding property type. 
+1. Since we know feed will work all of the time we can use the "try decoder.container()" 
+2. However in entry, somethimes there will be an array and sometimes there will not be an array. We can provide a do{} catch{}
+ - the do{} will attempt to read it as an array, if it is it will be decoded as an array of entry objects.
+ - If its not an array the catch will see if its single value and add it to an empty array
 
 ``` swift
 init(from decoder: Decoder) throws {
@@ -89,7 +93,17 @@ init(from decoder: Decoder) throws {
         }
              
     }
+   
+ // Now we can decode
+let decoder = JSONDecoder()
+let bookJSONData = booksJSON.data(using: .utf8)!
+let books = try! decoder.decode([Book].self, from: bookJSONData)
 
 ```
+## Property wrappers such as @Published, do not conform to codable
+
+
+
+
 
 
