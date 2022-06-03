@@ -101,7 +101,40 @@ let books = try! decoder.decode([Book].self, from: bookJSONData)
 
 ```
 ## Property wrappers such as @Published, do not conform to codable
+ 
+``` swift
+class User: ObservableObject, decodable {
+ var name = "Aidan Lynch"
+ var age = 27
+}
 
+```
+To work around this we need to create our own coding keys
+1. create our own enum with the name CodingKey. The enum must be of type String and conform to the CodingKey protocol.
+2. Use the @Published wrapper for the name property.
+3. Create an initializer (remeer it has to be a required init because it is a class)
+4. Inisde the initializer we extract the container
+5. Then assign each of the properties to the contents that come from the container, "name and age".  
+
+
+``` swift
+
+class User: ObservableObject, Decodable {
+    enum CodingKeys: String, CodingKey {
+        case name, age
+    }
+    @Published var name = "Aidan Lynch"
+    var age = 27
+    
+    required init(from decoder: Decoder) throws { // since user is a class we have to use the required keyword
+        let container = try decoder.container(keyedBy: CodingKeys.self) // inside the initializer we extract the container
+        name = try container.decode(String.self, forKey: .name)
+        age = try container.decode(Int.self, forKey: .age)
+        
+    }
+}
+
+```
 
 
 
