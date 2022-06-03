@@ -55,3 +55,49 @@ guard let url = URL(string: "https://api.github.com/users/TwoStraws/followers") 
  getJSON()
  
  ```
+ 
+## We can update this function to make it reusable
+``` swift
+ 
+ /*
+ 1. create a function to retrieve the followers
+    
+    - Add a completion call back that will take an optional array of GHFollower and return void
+ */
+ 
+      // 1. Create a string url so we dont have to hard code the url
+func getJSON(urlString: String, completion: @escaping ([GHFollower]?) -> Void) {
+guard let url = URL(string: urlString) else {
+    return
+}
+
+let request = URLRequest(url: url)
+
+URLSession.shared.dataTask(with: request) {(data, response, error) in
+    if let error = error {
+        print(error.localizedDescription)
+        completion(nil) //2. In the case of an error and the error doesnt exist completion will use nil as an array of GHFollower. This is why the [GHFollower]? is an optional.
+        return
+    }
+    guard let data = data else {
+        completion(nil) //3. if the coder cant decode our data it will use nil
+        return
+    }
+    let decoder = JSONDecoder()
+    guard let decodedData = try? decoder.decode([GHFollower].self, from: data) else {
+        completion(nil) //
+        return
+    }
+
+   completion(decodedData)//5. Parameter for the completion block
+}.resume()
+}
+
+getJSON(urlString: "https://api.github.com/users/TwoStraws/followers") { (followers) in
+    if let followers = followers {
+        for follower in followers {
+            print(follower.login)
+        }
+    }
+}
+ ```
