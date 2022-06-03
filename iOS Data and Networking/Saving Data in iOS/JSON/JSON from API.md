@@ -2,7 +2,7 @@
 
 We are going to create an API request that retrives all of the followers from Paul Hudsons Git hub.
 We will enter the url https://api.github.com/users/twostraws/followers into address bar and see the results
-in the window. We will build a structure that will regarding the login and id of each of Paul Hudsons followers.
+in the window. We will build a structure regarding the login and id of each of Paul Hudsons followers.
 
 # Example 
 1. Create the struct and make it conform to the decodable protocol, with properties login and id.
