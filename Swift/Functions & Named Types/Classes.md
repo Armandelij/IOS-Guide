@@ -16,7 +16,7 @@ class Pet {
 Simailar to a struct you create a class by:
 1. providing the key word "class"
 2. providing the name of the class
-3. Providing properties inside of the brackets
+3. Providing properties inside of the curly braces
 
 > unlike structures classes do not have inate initializers, so they will need to be provided.
 
