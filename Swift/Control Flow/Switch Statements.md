@@ -27,3 +27,6 @@ default:
 
 ## Complex Example
 
+We get use switch staements inside of a function.
+
+
