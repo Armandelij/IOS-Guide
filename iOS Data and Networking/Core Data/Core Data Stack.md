@@ -25,3 +25,4 @@ The managed object context is teh object you will work with most as a developer.
 
 ## Persistent Store Coordinator
 
+The persistent store coordinator is represented by an instance of **NSPersistentStoreCoordinator**. The persistent store coordinator keeps a reference to the managed object model. Every parent managed object context keeps a reference to the persistent store coordinator. 
