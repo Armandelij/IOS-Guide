@@ -13,4 +13,4 @@ The data model "purple rectangle above" houses the application bundle that conta
 > The data scheme is a collection of entities, these entities can have attributes and relationships.
 
 **Key Take Aways**
-> The manageed object model is an instance of the MSMabagedObjectModel class and that it is what the data model of the Core Data represents.  
+> The managed object model is an instance of the MSMabagedObjectModel class and that it is what the data model of the Core Data represents.  
