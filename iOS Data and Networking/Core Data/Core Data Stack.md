@@ -14,3 +14,14 @@ The data model "purple rectangle above" houses the application bundle that conta
 
 **Key Take Aways**
 > The managed object model is an instance of the MSMabagedObjectModel class and that it is what the data model of the Core Data represents.  
+
+
+## Managed Object Context
+
+A managed object context is represented by an instance of the NSManagedObjectContexts class. It recieves model objects from the persistent store coordinator. 
+
+The managed object context is teh object you will work with most as a developer. The NSManagedObjectContext class is seen as the workhorse of the Core Data framework because it creates, reads, updataed and deleted model objects. 
+
+
+## Persistent Store Coordinator
+
