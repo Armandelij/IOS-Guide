@@ -26,3 +26,55 @@ The managed object context is teh object you will work with most as a developer.
 ## Persistent Store Coordinator
 
 The persistent store coordinator is represented by an instance of **NSPersistentStoreCoordinator**. The persistent store coordinator keeps a reference to the managed object model. Every parent managed object context keeps a reference to the persistent store coordinator. 
+
+
+# Setting Up the Stack 
+
+Given a data model the NSPersistentContainer class creates the managed object model, managed object context and the persistant store coordinator
+
+``` swift
+var persistentCoreContainer: NSPersistentContainer = {}()
+
+```
+
+Inside the closure we are going to create an instance of persistant container. THe initializer for this class takes the name of the data model created.
+- The name value is used to name the persistant store and used to look up the name of the NSManagedObject model object to be used with the persistant. 
+
+``` swift
+var persistentCoreContainer: NSPersistentContainer = {
+let container = NSPersistentContainer(name: "Reminders")
+return container
+}()
+
+```
+
+Now we need to call the .loadPersistentStores method.
+1. THe method takes 2 completion blocks with 2 arguments
+  - an instance of **storeDescription**. This allows you to custiomize and load the persistent store. This only for customization and we will ignore it for now.
+  - an instance of **error** just in case the stack fails
+
+
+
+``` swift
+var persistentCoreContainer: NSPersistentContainer = {
+let container = NSPersistentContainer(name: "Reminders")
+container.loadPersistentStores { (storeDescription, error) in
+      if let error = error as NSError? {
+        fatalError("Unresolved error \(error), \(error.userInfo)")
+      }
+    }
+return container
+}()
+
+```
+
+
+
+
+
+
+
+
+
+
+
