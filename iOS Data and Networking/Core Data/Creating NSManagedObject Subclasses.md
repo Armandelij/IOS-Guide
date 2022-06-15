@@ -1,0 +1,64 @@
+# Creating NSManagedObject Subclasses
+
+When you create Core Data entitities and attributes related to those entities Core data will create somthing similar to a class. The attributes associated 
+will resemble properties when you look at it. 
+
+To have full control over the classes made do the following:
+1. Open the data model file and select the desired entity.
+2. Open the right panel to show the data model inspector.
+3. In the class section change the "Codgen" to Manual/None. This will allow us to fully control how our class is made.
+
+Your screen should look like this.
+<img width="1440" alt="Screen Shot 2022-06-15 at 1 23 06 PM" src="https://user-images.githubusercontent.com/64448202/173888075-85962ddb-5c0c-44a2-bd62-900fdaa4bfe9.png">
+
+To create how are classes are made do the following:
+1. In the Editor menu choose create NSMAnagedObject Subclass. 
+2. Make sure your project is selected and select Next, and make sure your entity is selected and
+press Next. 
+3. Now you will be asked where you would like to save this code, make sure you choose "Your project name" it should have a yellow folder on the left.
+You can store this in the a folder as well. Then click create. 
+
+Xcode has now created 2 files but we only are concerd with the one which is th CoreDataProperties.swift
+
+Inside the file you will see someting simialr to this below. These are the attributes that you specified when defining your entity. 
+
+``` swift
+@NSManaged public var title: String?
+@NSManaged public var director: String?
+@NSManaged public var year: Int16
+
+```
+
+You can see in the code above that optionals are provided for two of the attributes and you may not want optionals. You do have the liberty to delete them,
+however Core Data will still allow you to create instances of those values without providing a value. 
+
+``` swift
+@NSManaged public var title: String
+@NSManaged public var director: String
+@NSManaged public var year: Int16
+
+```
+
+However when we remove the (?)s from the attributes and follow through with the completion of the project errors are bound to occure. An easy solution is to 
+create computed properties for each attribute and use the variable name of it to refere to the attribute in your code.
+
+``` swift
+
+public var wrappedTitle: String {
+        title ?? "Unknown Title"
+    }
+    
+    public var wrappedDirector: String {
+        director ?? "Unknown director"
+    }
+
+````
+
+
+
+<img width="1440" alt="Screen Shot 2022-06-15 at 2 24 07 PM" src="https://user-images.githubusercontent.com/64448202/173898266-8616dada-e3d4-4c33-8e75-52e02f172b82.png">
+
+
+
+
+
