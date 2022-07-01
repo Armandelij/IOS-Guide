@@ -32,7 +32,7 @@ Inside the ScrollView we add a ScrollViewReader which will allow us provide code
 ScrollView {
             ScrollViewReader { value in // lets us refer to things within the ScrollView for scrolling purposes
                 Button("Jump to #5") {
-                    value.scrollTo(5) // scrolls to the vie of identifier #8 and will take the laziest view to default.
+                    value.scrollTo(5) // scrolls to the view of identifier #8 and will take the laziest view to default.
                 }
 ```
 The "value in" will lets us refer to things within the ScrollView for scrolling purposes.
