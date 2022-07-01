@@ -146,7 +146,6 @@ The 2 views that we created "SampleView and TextBlockView" can now be added to t
  CONTENTVIEW
  ``` swift
  class DataExample : ObservableObject {
-    @Published var text = "Counter"
     @Published var counter = 0
 }
 
