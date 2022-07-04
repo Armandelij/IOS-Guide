@@ -1,0 +1,32 @@
+# Introduction 
+Try to understand the concepts of this document before moving to any other topics.
+
+## Concurrency vs Parallelism
+
+**Concurrency:** When a single-core CPU is responsible for multiple tasks, it will pick up task 1 and complete some work then drop it to pick up task 2 to 
+complete some work. A singe-core CPU can only do or complete one task at a time. 
+> yes the word concurrent means doing many things at once, but the english definition does not apply here.
+
+**Parallelism:** Parallelism can only happen when there are more than CPU core. For example CPU 1 can work on task 1 while CPU 2 can work on task 2, these two
+CPUs can work at the same time on different tasks.
+> With more CPUs we can now split our work into smaller parts called threads.
+
+
+
+
+“Concurrency is about dealing with many things at once, parallelism is about doing many things at once. 
+Concurrency is a way to structure things so you can maybe use parallelism to do a better job.”
+
+Rob Pike
+
+
+## Threads vs queues
+
+**Main Thread:** Every program launches with at least one thread, this is known as the main thread. The main thread will exists for the lifetime
+of the application.
+> You applications UI must take place on the main thread ALL of the time. Any UI content placed on an alternative thread can result in a crash.
+
+Swift allows us to create multiple threads when we want, it is uncommon to create them because it generated a lot of complexity. Creating 40 threads with
+only 4 CPU cores, will result in the system swapping them AKA Context Switching.
+
+
