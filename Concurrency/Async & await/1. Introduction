@@ -27,6 +27,22 @@ of the application.
 > You applications UI must take place on the main thread ALL of the time. Any UI content placed on an alternative thread can result in a crash.
 
 Swift allows us to create multiple threads when we want, it is uncommon to create them because it generated a lot of complexity. Creating 40 threads with
-only 4 CPU cores, will result in the system swapping them AKA Context Switching.
+only 4 CPU cores, will result in the system swapping them AKA Context Switching. 
+
+**Context Switching:** Swapping threads comes at a cost: The system has to store the data that the thread was using and remember how far it has progressed
+before allowing another thread to run. The cost of thread switching grows higher and higher when the thread count excceds the number of available CPU cores.
+A result of this is known as thread explosion. 
+
+
+Queues
+**Queues:** Queues are similar to real life situation, think waiting in a line at the grocercy store or first in first out situation. Work will start
+in the order it was added to the queue UNLESS we specify that somthing has a high or low priority. 
+
+**Serial Queues:** When queues remove one piece of work from the front of the queue and completes it before procceding to the next piece of work. They do have
+concurrent capabilities (in the literal sense) to remove and execute multiple pieces of work at the same time. 
+
+
+** Threads are the individual slices of a program that do pieces of work, whereas queues are like pipelines of execution where
+we can request that work be done at some point.**
 
 
