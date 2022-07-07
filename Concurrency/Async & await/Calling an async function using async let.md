@@ -75,7 +75,39 @@ func loadData() async {
 await loadData()
 ```
 
+There is a nuance when dealing with **async let**, it captures any value it uses. This can result in you trying to modify data unsafley.
+In the code below the function accepts a user parameter so it can print a status message. 
+
+``` swift
+struct User: Decodable {
+    let id: UUID
+    let name: String
+    let age: Int
+}
+
+struct Message: Decodable, Identifiable {
+    let id: Int
+    let from: String
+    let message: String
+}
+
+func fetchFavorites(for user: User) async -> [Int] {
+    print("Fetching favorites for \(user.name)…")
+
+    do {
+        async let (favorites, _) = URLSession.shared.data(from: URL(string: "https://hws.dev/user-favorites.json")!)
+        return try await JSONDecoder().decode([Int].self, from: favorites)
+    } catch {
+        return []
+    }
+}
+
+let user = User(id: UUID(), name: "Taylor Swift", age: 26)
+async let favorites = fetchFavorites(for: user)
+await print("Found \(favorites.count) favorites.")
+```
+
+If our user instance is created with **var** instead of **let** our **async let** will capture it instead of copied, the result is seift will throw up a build error "Reference to captured var 'user' in concurrently-executing code." To fix this, we can change the instance from a variable to a constant. 
+
+
 In conclusion the swift compiler will track which **async let** constant that could throw errors and enforce **try** when reading their value. 
-
-
-
