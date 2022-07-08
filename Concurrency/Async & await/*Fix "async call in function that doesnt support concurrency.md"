@@ -1,0 +1,1 @@
+# Fix "async call in function that doesnt support concurrency"
