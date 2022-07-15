@@ -27,7 +27,7 @@ The size of the array above has no affect on the running time because because th
 The Big O notaion for constant time is O(1)
 
 
-# Linear Time
+
 
 
 
