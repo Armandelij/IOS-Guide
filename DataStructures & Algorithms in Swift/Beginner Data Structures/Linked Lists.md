@@ -2,9 +2,13 @@
 
 A linked list is a collection of values arranged in a linear unidirectional sequence. 
 
+You should use a linked list when your insertion and deletion is frequent.
+
 Linked lists have some advantages over contigous storage options like arrays:
  - They have a constant insertion and removal from the front of the list. With arrays we achieve this from pushing and popping from the top or back of the
  array. 
+ 
+ > Adding elements to the front of the array will cause all of the elements to shift around increasing the time complexity. 
  
 ![linked list](https://user-images.githubusercontent.com/64448202/180463151-05795e7d-e9fc-4ce3-a4f2-d2660d3588fd.png)
 
