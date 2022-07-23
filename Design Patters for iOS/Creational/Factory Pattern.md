@@ -43,6 +43,26 @@ class EnvironmentFactory {
 let factory = EnvironmentFactory()
 
 factory.create(.dev)
+```
+Uunderstanding the code above:
 
+1. We have two classes DevEnvironment and LiveEnvironment both classes inherit from the protocol Environment.
+ 
+2. The EnvironemntFactory class includes an Enum of type EnvType. The enum has two cases **dev** and **live**.
+ 
+3. The **create** function in the EnvironmentFactory has a switch statement that has case **dev** that returns the DevEnvironment and a case **live** that retuns the LiveEnvironment.
+ 
+ > if anyone wants to use LiveEnvironemt or DevEnvironment they can use an instance of EnvironmentFactory and use its "create" function property.
+ 
+4. We've accessed it above by storing EnvironmentFactory() into the constant factory.
+ ``` swift 
+ let factory = EnvironmentFactory()
+ ```
+ 
+5. We then use the instance "factory" and then use dot notation to access the create function then pass in ".dev" or ".live" It will return either DevEnvironment or LiveEnvironment
+ 
+ ``` swift
+ factory.create(.dev)
 ```
 
+ 
