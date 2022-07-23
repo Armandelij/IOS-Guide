@@ -44,7 +44,7 @@ let factory = EnvironmentFactory()
 
 factory.create(.dev)
 ```
-Uunderstanding the code above:
+Understanding the code above:
 
 1. We have two classes DevEnvironment and LiveEnvironment both classes inherit from the protocol Environment.
  
