@@ -49,3 +49,9 @@ factoryFacade.produceCar()
 > The Facade is make up of subsystems in our case the subsystems are the Engine, Body, and Accessories class. 
 
 If you want to access those subsystems you can create constant that is equal to the FactoryFacade(). Now you have access to its properties. 
+
+``` swift
+let factoryFacade = FactoryFacade()
+factoryFacade.produceCar()
+```
+
