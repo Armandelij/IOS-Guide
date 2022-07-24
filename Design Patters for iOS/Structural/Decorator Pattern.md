@@ -6,6 +6,7 @@ change a classes behavior by wrapping it in another object.
 There are two components to the decorator pattern: 
 Core Object
  - The core object will have its behavior modified.
+ 
  Decorator Object
  - Brings out the changed behavior in the core object
 
