@@ -31,12 +31,8 @@ protocol Bidder {
 ```
 The auctioneer will store a list of bidders who want to be notified of a new high bid. Managing the list of bidders would require them to register, deregister and notify functions. 
 
-``` swift
 
-
-
-
-```
+# NOT COMPLETE
 
 
 
