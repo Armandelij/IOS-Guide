@@ -4,7 +4,7 @@
 Here are some example of Swifts Concurrency in action 
 
 
-Below is an example of using multiple asyc calls. Each call will execute in order, as a result of this this images load in a similar fashion.
+Below is an example of using multiple asyc calls. Each call will execute in order, as a result the images load in a similar fashion.
 
 https://user-images.githubusercontent.com/64448202/182860971-3ecf5c76-49f3-44bc-b0ee-cbbba5a748f2.mov
 
