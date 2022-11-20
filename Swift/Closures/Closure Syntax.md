@@ -1,6 +1,6 @@
 # Closure Syntax
 
-There are multiple syntax variations you can use to create a closure. Lets take a look at some blow.
+There are multiple syntax variations you can use to create a closure. Lets take a look at some below.
 
 ``` swift
 typealias Operate = (Int, Int) -> Int
