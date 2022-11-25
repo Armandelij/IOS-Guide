@@ -39,6 +39,10 @@ print(bob.middleName!) // this will not compile because there is no value for th
 You can utilize optional chaining by using ?, similar to using a ! for force unwrapping.
 > The result of an optional chaining call is the same as the return value.
 
+``` swift
+let firstLetter = bob.middleName?.first // here we are accesssing the middle name property which is an optional, so to access the values of that property we can use dot(.) notataion to access the values or other properties in the case of a class or struct
+```
+> It more or less allows us to access other properties. 
 
 *Optional Binding*
 
@@ -63,26 +67,6 @@ func tellMeAboutThePerson(person: Person) {
 
 tellMeAboutThePerson(person: bob)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Interviewer: What is an Optional
 
