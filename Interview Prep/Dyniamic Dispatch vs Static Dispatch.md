@@ -8,3 +8,4 @@ for this is because swift allows you to override methods and properties of a sup
 This when the compiler does know which method will be called at runtime, this does create a performance boost. You can mark a base class with the final
 keyword to achieve static dispatch.
 
+You can mark a method with "class" or "static" and depending on what you will choose will determine how it will be dispatched. 
