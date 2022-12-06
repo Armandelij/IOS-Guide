@@ -2,7 +2,7 @@
 
 ## @escaping
 
-If a closure is passed as an argument to a function and it is invoked after the Funtion returns, the closure is escaping. @escaping is ususlayy used
+If a closure is passed as an argument to a function and it is invoked after the Funtion returns, the closure is escaping. @escaping is usually used
 or required for network calls. You want your completion handler to live after the return statement.
 
 ## nonescaping
