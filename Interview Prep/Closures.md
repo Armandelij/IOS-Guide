@@ -23,7 +23,7 @@ greet()
 
 ``` swift
 
-// Closure that excepts a parameter
+// Closure that accepts a parameter
 let greetUser = {(name: String) in
     print("Hey what is your name \(name)")
 }
