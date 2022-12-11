@@ -19,7 +19,7 @@ var greet = {
 greet()
 
 ```
-## Closure that excepts a parameter
+## Closure that accepts a parameter
 
 ``` swift
 
