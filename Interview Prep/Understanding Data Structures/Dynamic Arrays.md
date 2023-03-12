@@ -19,11 +19,11 @@ When an array is full and you want to add an element you will need to create a f
  
 > Ideally you want to add elements to the end of an array, if what you need calls for you to add elements to the beginning of an array, a different data structure should be used. 
 
-You can append an element into an array in swift by using  (arrayName.append)
+You can append an element to the end of an array in swift by using  (arrayName.append)
 
 ``` swift
 
-people.append("Bob") // this will add "Bob" to a string array named people
+people.append("Bob") // this will add "Bob" to the end of a string array named people
 
 ```
 
