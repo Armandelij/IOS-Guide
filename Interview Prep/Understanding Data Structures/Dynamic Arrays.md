@@ -13,7 +13,7 @@ When an array is full and you want to add an element you will need to create a f
 **ADDING ELEMENTS** 
 
  Add an element to the end of the array (most efficient). This will keep the time complexity constant (meaning this operation will take the same 
- time to complete no matter how large the array is.)
+ time to complete no matter how large the array is.
  
  You can insert elements within an array but this is costly because all the elements in the array will have to shift backward by 1 index which takes *n* steps
  
