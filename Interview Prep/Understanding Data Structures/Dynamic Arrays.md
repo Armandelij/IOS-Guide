@@ -43,7 +43,7 @@ So if a copy of an array is made, an insertion of an element at the end of the n
  
  **DELETING ELEMENTS** 
  
- It is ideal to delete elements from the end of an array because all of the elements do not have to shift if you're deleting elements at a specific index. However, you can still delete elements at specific indexes like the first index and any index. below are different methods and their use cases when deleting elements
+ It is ideal to delete elements from the end of an array because all of the elements do not have to shift as opposed to deleting elements at a specific index. However, you can still delete elements at specific indexes like the first index and any index. below are different methods and their use cases when deleting elements
  
  
  ``` swift
