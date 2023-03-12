@@ -1,7 +1,7 @@
 # Dynamic Arrays
 
 ## How do Dynamic Arrays Work
-A dynamic array grows automatically when you try to add elements to an array that is its capacity. 
+A dynamic array grows automatically when you try to add elements to an array that is at its capacity. 
 
 ## APPROACH
 
