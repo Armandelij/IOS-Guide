@@ -72,10 +72,14 @@ So if a copy of an array is made, an insertion of an element at the end of the n
  
  
  
- > Here are more ways to remove elements from an array: https://ohmyswift.com/blog/2022/04/24/different-methods-to-remove-the-last-item-from-an-array-in-swift/
+ ## Here are more ways to remove elements from an array: 
+  
+  https://ohmyswift.com/blog/2022/04/24/different-methods-to-remove-the-last-item-from-an-array-in-swift/
  
  
- > Good resource on Swift arrays: https://heartbeat.comet.ml/diving-into-data-structures-in-swift-arrays-4ffd516bde9b
+ ## Good resource on Swift arrays: 
+ 
+ https://heartbeat.comet.ml/diving-into-data-structures-in-swift-arrays-4ffd516bde9b
  
  
  
