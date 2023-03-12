@@ -69,6 +69,21 @@ So if a copy of an array is made, an insertion of an element at the end of the n
  You can declare this method when you initialize the array.
  
  > You can still append elements that surpass the reserve capacity amount, this will however trigger reallocation.
+
+
+## ADVANTAGES 
+ 1. Random access of elements 0(1)
+ 2. Good locality of reference and data cache utilization
+ 3. Easy to insert/delete at the end
+
+## DISADVANTAGES
+1. Waste more memory than a linked list
+2. Shifting elemnts is time consuming
+3. Expanding/Shrinking the array is time consuming
+
+
+
+
  
  
  
