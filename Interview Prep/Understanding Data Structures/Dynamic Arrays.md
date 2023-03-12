@@ -31,11 +31,6 @@ You can append an element to the end of an array in swift by using  (arrayName.a
 people.append("Bob") // this will add "Bob" to the end of a string array named people
 
 ```
-
-Below are different methods for adding elements to an array
-
-
-
  
  An additional factor that determines the speed of inserting an element is the capacity of the array. If you try to add elements to an array
  that is at maximum capacity the array must restructure itself to make more room for more elements. 
