@@ -17,6 +17,11 @@ When an array is full and you want to add an element you will need to create a f
  
  You can insert elements within an array but this is costly because all the elements in the array will have to shift backward by 1 index which takes *n* steps
  
+ ``` swift
+people.insert("Kevin", at: 2)
+
+``` 
+ 
 > Ideally you want to add elements to the end of an array, if what you need calls for you to add elements to the beginning of an array, a different data structure should be used. 
 
 You can append an element to the end of an array in swift by using  (arrayName.append)
@@ -29,11 +34,7 @@ people.append("Bob") // this will add "Bob" to the end of a string array named p
 
 Below are different methods for adding elements to an array
 
-``` swift
-people.insert("Kevin", at: 2)
 
-
-``` 
 
  
  An additional factor that determines the speed of inserting an element is the capacity of the array. If you try to add elements to an array
