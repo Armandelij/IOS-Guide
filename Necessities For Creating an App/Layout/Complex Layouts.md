@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/64448202/225443801-78241b0a-1e66-4e22-
 
 
 **NavigationView:** With Navigation view we can push and pop views on and off one another as well as setting a title and adding buttons. In this example 
-it is primarly used to give us the title which is "Animal" which is located at the top left hand side in bold.
+it is primarly used as a parent container to all the views as well as to give us the "Animal" title which is located at the top left hand side in bold.
 
 **ScrollView:** ScrollView is responsible for giving us the ability to vertically scroll all of its child views. This will be more noticable when
 when we add more views inside of it.
