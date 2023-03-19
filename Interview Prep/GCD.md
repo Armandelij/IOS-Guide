@@ -1,6 +1,6 @@
 # GCD
 
-GCD is a lower level APU for managing concurrent operarions
+GCD is a lower level API for managing concurrent operarions
 
 ## Dispatch Queue
 
