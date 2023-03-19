@@ -34,9 +34,28 @@ when we add more views inside of it. We can also specify the direction in which 
 **LazyHStack:** Allows us to load our content horizontally as it appears on the screen and not all at once. Within the LazyHStack we implement a **ForEach** loop that allows us to loop over all of the information in out animal variable. 
 
 
+## 2nd Section and its code
+
+https://user-images.githubusercontent.com/64448202/226216650-108d0aa6-2df6-4db9-b492-efba1c81b1e8.mov
+
+
+<img width="914" alt="Screenshot 2023-03-19 at 7 34 25 PM" src="https://user-images.githubusercontent.com/64448202/226216812-0b0879f8-dac0-43be-8dee-99110eb8f7fa.png">
+
+**LazyHGrid:** LazyHGrid gives us access to **rows** and **spacing** argument and with that we can specify how many rows we want as well as the spacing 
+bwtween those rows. To make contentView easier to read a rows constant was created, so when we implement it in the **LazyHGrid** it is easier to read
+
+
+<img width="914" alt="Screenshot 2023-03-19 at 7 34 46 PM" src="https://user-images.githubusercontent.com/64448202/226216821-5438da8f-8b02-417e-a89b-9cf33ddd26ce.png">
+
+For this view the only thing we changed was the view, we changed it from the **AnimalCardView()** to **AnimalTileView()** The nessecary arguments 
+associated with the **AnimalTileView()** were also implemented. 
 
 
 
+
+## 3nd Section and its code
+
+https://user-images.githubusercontent.com/64448202/226217848-08d8c02d-6734-4bc4-ad68-9902dc4333b9.mov
 
 
 
