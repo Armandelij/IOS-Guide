@@ -6,7 +6,7 @@ GCD is a lower level API for managing concurrent operarions
 
 *GlobalQueue* - Used to perform non UI work in the background
 
-*MainQueu* - Used to update the UI after completing work in a task on a concurrent Queue
+*MainQueue* - Used to update the UI after completing work in a task on a concurrent Queue
 
 *DispatchQueue Priorities*
 
