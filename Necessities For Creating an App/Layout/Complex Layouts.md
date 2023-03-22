@@ -2,7 +2,7 @@
 
 What we are going to build 
 
-// video file
+https://user-images.githubusercontent.com/64448202/226217848-08d8c02d-6734-4bc4-ad68-9902dc4333b9.mov
 
 This project assumes that you have built the nessecary individual views needed to implement them into our contentView. We will only be covering the
 organization of those individual views and how to organize them so you arrive at the video above.
