@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/64448202/226215976-5d65447d-a412-4f81-
 
 
 
-**NavigationView:** With Navigation view we can push and pop views on and off one another as well as setting a title and adding buttons. In this example 
+**NavigationView:** With NavigationView we can push and pop views on and off one another as well as setting a title and adding buttons. In this example 
 it is primarly used as a parent container to all the views as well as to give us the "Animal" title which is located at the top left hand side in bold.
 
 **ScrollView:** ScrollView is responsible for giving us the ability to vertically scroll all of its child views. This will be more noticable when
@@ -60,6 +60,11 @@ https://user-images.githubusercontent.com/64448202/226217848-08d8c02d-6734-4bc4-
 
 <img width="984" alt="Screenshot 2023-03-21 at 9 25 39 PM" src="https://user-images.githubusercontent.com/64448202/226778000-e364ffab-1f3f-4b42-9f99-50be896e1ec4.png">
 
+In the third section we implement a LazyVStack which is similar to our other LazyV/H stacks views. In this LazyVStack a we have access to the "pinned Views" argument which lets us specify different headers for our content. 
+
+**Section** We can specify our section with a header so Xcode will generate it for us. Here we insert our ForEach loop into our section and at the end ouf our section we can customize our header for this specific section.
+
+<img width="435" alt="Screenshot 2023-03-21 at 10 04 46 PM" src="https://user-images.githubusercontent.com/64448202/226783137-58acc044-b294-41ce-bdad-c39ab3a173cc.png">
 
 
 
