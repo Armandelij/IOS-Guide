@@ -67,6 +67,8 @@ In the third section we implement a LazyVStack which is similar to our other Laz
 <img width="435" alt="Screenshot 2023-03-21 at 10 04 46 PM" src="https://user-images.githubusercontent.com/64448202/226783137-58acc044-b294-41ce-bdad-c39ab3a173cc.png">
 
 
+## Thanks for viewing you can check out the entire project by following the link below
 
+Project Files: https://github.com/Armandelij/ScollView-MiniProject-
 
 
