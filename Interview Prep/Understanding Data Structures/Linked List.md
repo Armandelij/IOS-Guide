@@ -83,7 +83,7 @@ public class LinkedList {
 fileprivate var head: Node?
   private var tail: Node?
 
-  public var isEmpty: Bool { // if this is empty the head should return nil
+  public var isEmpty: Bool { 
     return head == nil
   }
 
