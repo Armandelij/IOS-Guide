@@ -61,8 +61,8 @@ weak var previous: Node? // we use a weak variable to prevent retain cycles. Som
 public class Node {
 
 var value: String // this value can be of any type
-var next: Node? 
-weak var previous: Node?
+var next: Node?  // The reason our next node is an optional is because its the last node in the list and doesnt point to another node.
+weak var previous: Node? // Our previous node doesnt point to a
 
 init(value: String) { // here we initialize the value. We do this for non optional properties in the class
   self.value = value
@@ -71,6 +71,85 @@ init(value: String) { // here we initialize the value. We do this for non option
 }
 
 ```
+
+## Linked List 
+
+Now that we have created a Node it is time to create a Linked List. A Linked List will keep track of where the list ends and begins
+
+``` swift 
+
+public class LinkedList {
+
+fileprivate var head: Node?
+  private var tail: Node?
+
+  public var isEmpty: Bool { // if this is empty the head should return nil
+    return head == nil
+  }
+
+  public var first: Node? { 
+    return head
+  }
+
+  public var last: Node? {
+    return tail
+  }
+
+}
+```
+
+
+## Append
+
+To add new nodes to our list we will need a function that will help in doing that. We will declare a append method in our LinkedList class
+
+``` swift
+public func append(value: String) {
+  // 1
+  let newNode = Node(value: value) // creating our new node
+  // 2
+  if let tailNode = tail { 
+    newNode.previous = tailNode
+    tailNode.next = newNode
+  } 
+  // 3
+  else {
+    head = newNode
+  }
+  // 4
+  tail = newNode
+}
+```
+
+## Understanding the above code
+
+1.
+ ``` swift 
+ //1
+let newNode = Node(value: value)
+```
+Here we created a new node. The purpose of the node class is so that each node in th elinked list can point to the previous and next code.
+
+
+``` swift
+//2
+if let tailNode = tail {
+    newNode.previous = tailNode
+    tailNode.next = newNode
+
+```
+
+2. 
+If tail node is not nill, that means something exists within our linked list. if that is the case then have the new node point to the tail of the 
+list as it pervious item. Now we configure the last implemented item to point to the new node as its next item. 
+
+
+Finally we set the tail of the list to be the new item in either case. 
+
+## Printing your Linked List
+
+
+
 
 
 
