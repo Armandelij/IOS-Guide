@@ -148,9 +148,74 @@ Finally we set the tail of the list to be the new item in either case.
 
 ## Printing your Linked List
 
+To print our output we need to make our Linkedlist adopt the **CustomStringConvertable** protocol. We do this by adding the following:
 
-https://www.kodeco.com/947-swift-algorithm-club-swift-linked-list-data-structure
+``` swift
+// 1
+extension LinkedList: CustomStringConvertible {
+  // 2
+  public var description: String {
+    // 3
+    var text = "["
+    var node = head
+    // 4
+    while node != nil {
+      text += "\(node!.value)"
+      node = node!.next
+      if node != nil { text += ", " }
+    }
+    // 5
+    return text + "]"
+  }
+}
 
+```
+1. We created an extension to our Linked list class and adopted the CustomStringConvirtable protocol. The protocole expects us to implement at computed property with the name **description**,  with the **String** type.
+
+2. We declared a **description** property, it is a read only property and it returns a string.
+3. We declare a **text** variable that will hold the entire string. For now it holds the opening brace to represent the start of a list
+4. Now we loop through th elist appending the value to each item to the text String.
+5. Add a closing brace to the end of the text variable.
+
+
+## Accessing Nodes
+
+We can access nodes by index. To do this we declare a **nodeAt(index:)**  method in our LinkedList class. This will return our node at the specified index
+
+
+``` swift
+public func nodeAt(index: Int) -> Node? {
+  // 1
+  if index >= 0 {
+    var node = head
+    var i = index
+    // 2
+    while node != nil {
+      if i == 0 { return node }
+      i -= 1
+      node = node!.next
+    }
+  }
+  // 3
+  return nil
+}
+```
+
+1. we implemented a check make sure the specified index is not negative. This will prevent an infinite loop if the **index** is negative.
+2. Loop through node untill we reach the specified index.
+3. If the index is less than 0 or greater than the number of items in the list return nil.
+
+## Removing all Nodes
+
+To remove all nodes we just asign nil to the head and tail
+
+``` swift
+public func removeAll() {
+  head = nil
+  tail = nil
+}
+
+```
 
 
 
