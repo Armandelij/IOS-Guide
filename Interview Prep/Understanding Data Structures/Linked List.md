@@ -216,29 +216,3 @@ public func removeAll() {
 }
 
 ```
-
-## Generics
-
-With Generics we can abstract away the type requirement frok our linked list. Initialy we used a string value to indicate what type of value should
-be given to the node.
-
-Below is our current node class
-
-``` swift
-public class Node {
-
-var value: String 
-var next: Node?  
-weak var previous: Node? 
-
-init(value: String) { 
-  self.value = value
-  }
-
-}
-
-```
-
-
-
-
