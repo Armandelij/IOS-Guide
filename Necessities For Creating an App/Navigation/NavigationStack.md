@@ -39,11 +39,11 @@ https://user-images.githubusercontent.com/64448202/232340419-b76ac7a8-3b8c-4f6f-
 
 ## Understanding **NavigationLink**
 
-THere a
+We can also use a **NavigationLink** that provides a value which allows you to present views based off of its value. This can be Decodable Encodable or a Hashable value.
 
 
 <img width="676" alt="Screenshot 2023-04-16 at 4 51 44 PM" src="https://user-images.githubusercontent.com/64448202/232341507-36f77313-1963-4f58-8154-ece941970d76.png">
 
 
-
+To use 
 
