@@ -1,4 +1,4 @@
-## Transforming & Filtering
+## Transforming Operators
 
 ## collect()
 Thhe collect() operator takes a stream of individual values from a publisher and turns them into an array of values.
