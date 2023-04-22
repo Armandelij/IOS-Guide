@@ -60,7 +60,7 @@ Understanding the code above:
 2. The map operator will take in the passed in value and procees it through the number formatter
 
 
-# replceNil
+# replaceNil
 replaceNil() transforms all of the instances of nil coming from the publisher with a value you provide.
 
 ``` swift
@@ -81,7 +81,7 @@ Understanding the code above:
 2 .map will take all of the values in the array and force unwrap them individually.
 3 .sink will subscribe to the publisher and print them out. 
 
-# replceEmpty
+# replaceEmpty
 replaceEmpty inserts a value if the publisher completes without emitting and values.
 > The publisher must send a completion event, otherwise it does not know if the publisher is done emitting values.
 
