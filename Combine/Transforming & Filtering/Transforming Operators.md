@@ -60,6 +60,31 @@ Understanding the code above:
 2. The map operator will take in the passed in value and procees it through the number formatter
 
 
+# replceNil
+replaceNil() transforms all of the instances of nil coming from the publisher with a value you provide.
+
+``` swift
+example(of: "replaceNil") {
+    ["A", nil, "C", "D", "E"].publisher
+    
+    //1
+        .replaceNil (with: "-")
+    //2
+        .map{$0!}
+    //3
+        .sink(receiveValue: {print($0) })
+        .store(in: &subscriptions)
+}
+```
+Understanding the code above:
+1 .replace nil will do exactly that, it will replace nil with whatever you specify.
+2 .map will take all of the values in the array and force unwrap them individually.
+3 .sink will subscribe to the publisher and print them out. 
+
+# replceEmpty
+replaceEmpty inserts a value if the publisher completes without emitting and values.
+> The publisher must send a completion event, otherwise it does not know if the publisher is done emitting values.
+
 
 
 
