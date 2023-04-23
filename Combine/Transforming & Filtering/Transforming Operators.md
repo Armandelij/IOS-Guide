@@ -86,5 +86,13 @@ replaceEmpty inserts a value if the publisher completes without emitting and val
 > The publisher must send a completion event, otherwise it does not know if the publisher is done emitting values.
 
 
+# scan() 
+Allows you to build upon the most recent output from the operator
+
+
+
+# flatMap()
+Allows you to combine output from more than one publisher into one publisher to send to downstream comsumers
+
 
 
