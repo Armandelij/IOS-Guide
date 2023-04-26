@@ -89,6 +89,47 @@ replaceEmpty inserts a value if the publisher completes without emitting and val
 # scan() 
 Allows you to build upon the most recent output from the operator
 
+``` swift
+
+example(of: "scan") {
+    //1
+    var dailyGainLoss: Int { .random(in: -10...10) }
+    //2
+    let august2019 = (0..<22)
+        .map { _ in dailyGainLoss }
+        .publisher
+    //3
+    august2019
+        .scan(50) { latest, current in
+            max(0, latest + current)
+        }
+        .sink(receiveValue: {_ in })
+        .store(in: &subscriptions)
+}
+```
+
+Understanding the code above:
+1. Here is a computed property that will return a random number between -10 to 10
+2. We use the dailyGainLoss to create a publisher from an array of random Int. So **august2019** is now an array of Ints (stock prices) ranging from 0-22 (mot including 22).
+3. The scan operator has a value of 50 **.scan(50)** wich will simulate a change to the stock price. max(0) will keep the stock price positive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # flatMap()
