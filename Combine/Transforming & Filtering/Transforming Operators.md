@@ -114,26 +114,10 @@ Understanding the code above:
 3. The scan operator has a value of 50 **.scan(50)** wich will simulate a change to the stock price. max(0) will keep the stock price positive
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # flatMap()
 Allows you to combine output from more than one publisher into one publisher to send to downstream comsumers
+
+
 
 
 
