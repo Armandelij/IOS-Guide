@@ -46,6 +46,33 @@ Understanding the Code above:
 1. Removes duplicates from the words variable.
 
 
+## CompactMap()
+compactMap() allows you to ignore nil results from a map operation.
+
+``` swift
+example(of: "CompactMap()") {
+    
+    // 1
+    let strings = ["a", "1.24", "3", "def", "34", "0.23"].publisher
+    
+    strings
+    // 2
+        .compactMap{Float($0)}
+        .sink(receiveValue: {
+            print($0)
+        })
+        .store(in: &subscriptions)
+}
+```
+
+Understanding the code above
+1. create a publisher on the string array
+2. Use the compact method on the strings instance. It will attempt to convert all of the strings to floats, if an element cannot be converted to a float, it will be ommited from the output.
+
+
+
+
+
 
 
 
