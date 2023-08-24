@@ -2,9 +2,9 @@
 
 The singleton ensures that only one instance/object exists for a class. This is beneficial when one object needs to organize actions across the system.
 
-The Singleton pattern is very easy to over use and are not beneficial if you are simply trying to pass information from one view controller to another.
+The Singleton pattern is very easy to over use and is not beneficial if you are simply trying to pass information from one view controller to another.
 
-Singletons can promblamtic when testing. For example if you have state being stored in a global object (singleton), the order of the tests matter. 
+Singletons can be problematic when testing. For example if you have state being stored in a global object (singleton), the order of the tests matter. 
 
 
 ## Static Property and Private Initializer
@@ -35,10 +35,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 Understanding the code above:
-1. Using **static** allows us to let the shared property be apart of the actual class rather than an instance of it. Other object can have access to it, reduces redundancy.
-  - makes the code alot easier to read 
+1. Using **static** allows us to let the shared property be apart of the actual class rather than an instance of it. Other objects can have access to it, reduces redundancy.
+  - makes the code a lot easier to read 
 2. The initializer is private, meaning only the NetworkManager class can create instances of itself. 
-> we dont need to mark the staic property as lazy because the initializer of global variables and static properties are executed lazily by default. 
+> we dont need to mark the static property as lazy because the initializer of global variables and static properties are executed lazily by default. 
 
 ## Dependancy Injection and Singleton
 
