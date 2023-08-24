@@ -22,7 +22,7 @@ enum Gender: {
 
 ```
 
-Now we can assingn a constant or variable to one of the cases related to type.
+Now we can assign a constant or variable to one of the cases related to type.
 
 ``` swift
 // assinging a constant to gender
