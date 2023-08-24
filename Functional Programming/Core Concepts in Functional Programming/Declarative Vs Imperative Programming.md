@@ -1,10 +1,10 @@
 # Declarative Vs Imperative Programming
 
 
-Declarative programming focuses heavily on recursions. Instead of loops functional programming uses recursions to maintain immutability through the code as apposed to loops which require mutability.
+Declarative programming focuses heavily on recursions. Instead of loops functional programming uses recursions to maintain immutability through the code as opposed to loops which require mutability.
 
 
-Below is an example of Imerative programming:
+Below is an example of imperative programming:
 
 ``` swift 
 var total = 0
