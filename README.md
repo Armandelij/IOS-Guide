@@ -5,4 +5,10 @@
 Hello, welcome to my iOS Guide, where I keep all of my past learnings as a reference. As we all know, it is nearly impossible to 
 retain all that Apple has given us to develop on their platform. Because of this, the iOS Guide was born. Initially, on my iOS journey, I found myself trying to remember everything I studied until I realized it was impossible and unnessary to do, so this guide serves as a second brain for strictly iOS dev. It frees me from trying to remember everything. Additionally I find it helpful to watch tutorials and re-write the explanations in my own words, this helps me solidify my learnings. 
 
-This guide has been beneficial for me. Hopefully, it impacts the person viewing it the same.  
+This guide has been beneficial for me. Hopefully, it impacts the person viewing it the same.
+
+Thank you for viewing!
+
+Here is ARkit in action.
+
+https://user-images.githubusercontent.com/64448202/222935305-3091f993-2155-4554-b569-a539ff7d729b.MP4
