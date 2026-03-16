@@ -8,7 +8,7 @@ works in swift.
 The adapter pattern is about creating intermediary abstraction that translates to the old component of the new system. Sometimes it is called a wrapper
 because it wraps the object and provides a new interface. 
 
-To implement the Adapter pattern you need to create a new object that will box the old one in, then you will iimplement the target interface by wrapping
+To implement the Adapter pattern you need to create a new object that will box the old one in, then you will implement the target interface by wrapping
 another adaptee object. 
 
 Adaptee: Is the object we are adapting to fit a specific target.
