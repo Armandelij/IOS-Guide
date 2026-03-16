@@ -1,7 +1,7 @@
 # Adapter Pattern
 
 Imagine you have a new iphone, the headphones you currently have only fit your previous phones headphone jack. Fortunatley, you're in luck because an 
-adapter is something you can purchase to act as a medium so old and new devices can work together. This in a round about way is houw the Adapter pattern
+adapter is something you can purchase to act as a medium so old and new devices can work together. This in a round about way is how the Adapter pattern
 works in swift.
 
 
